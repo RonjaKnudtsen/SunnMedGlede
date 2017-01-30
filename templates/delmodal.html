@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h2>Er du sikker på at du vil slette dette?</h2>
+ <!--   <p ng-show="data.title"><b>Tittel: "{{data.title}}"</b></p>
+    <p ng-show="data.text">Tekst: "{{data.text}}"</p>-->
+
+</div>
+<div class="modal-body">
+
+ <p ng-repeat="(key, value) in data" ng-if="key != 'path'">
+  {{value}}</br>
+
+ </p>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" ng-click="dismiss()" data-dismiss="modal">Nei, lukk/avbryt.</button>
+        <button type="button" ng-click="upload(edit)" class="btn btn-danger">Ja, slett</button>
+      </div>

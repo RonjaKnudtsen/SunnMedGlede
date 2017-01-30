@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" ng-app="sunn_sterk">
+  <head>
+    <meta charset="utf-8">
+    <title>SunnSterk</title>
+    		<script src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/tinymce/tinymce.js"></script>
+	<script src="bower_components/angular/angular.js"></script> 
+	<script type="text/javascript" src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+	
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> 
+	<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script> 
+	
+	<script src="bower_components/firebase/firebase.js"></script> 
+	<script src="bower_components/angularfire/dist/angularfire.min.js"></script> 
+
+
+
+
+
+
+	<!-- Bootstrap & jquery -->
+
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- UI bootstrap -->
+	<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+	<link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!-- Animation -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
+
+ 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+
+	<!-- Dont need this, it is compled to css/style.css <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">	-->
+
+	<!--Compiled css including bootstrap-->
+	<link href="css/style.css" rel="stylesheet">	
+
+	<!--Angular app-->
+	<script src="app.js"></script>
+
+	<!--Controller and directive -->
+	<script src="controllers.js"></script>
+	<script src="directives.js"></script>
+	<script src="slider-directive.js"></script>
+
+	<!--Service -->
+	<script src="firebase_api_keys.js"></script>
+	<script src="services.js"></script>
+	<script src="sessionService.js"></script>
+
+
+
+</head>
+<body>
+
+<!-- NAVBAR-->
+<nav class="navbar navbar-default navbar-static-top">
+
+  	<div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	       <img src="images/logo_40.png"></span>
+	         <p class="brand-text">Sunn med glede</p>
+	      </a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="navbar-menu">
+		    <ul class="nav navbar-nav navbar-right">
+			    
+			    <li><a>Om oss</a></li>
+			    <li><a>Blogg</a></li>
+			    <li><a href="https://www.facebook.com/sunnmedglede.no/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+			    <li></li>
+
+		    </ul>
+	    </div>
+  	</div>
+</nav>	
+
+<!-- RENDER THE VIEW -->
+<div class="main" ui-view autoscroll="true"></div>
+
+<footer class="footer">
+	<div class="container">
+		<p>Icons designed by <a href="http://www.flaticon.com/authors/freepik">Freepik</a> from Flaticon</p>
+		<p>Photos taken by <a href="http://www.piasundnes.no">Pia Sundnes</a> </p>
+		<p>Website designed and developed by <a href="http://ronjaknudtsen.net/#/">Ronja Knudtsen</a></p>
+		<!--LOGIN DIRECTIVE -->
+		<login></login>
+		
+	</div>
+</footer>
+</body>
+</html>

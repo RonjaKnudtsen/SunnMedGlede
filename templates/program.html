@@ -1,0 +1,118 @@
+<div class="container">
+
+  <div class="row split-section">
+    <div class="col-sm-10  col-sm-offset-1">
+    <h1>{{program.title}}</h1>
+      <p><b><i>{{program.programname}} - {{program.shortdesc}}</i></b></p>  
+      <p ng-bind-html="program.description"></p>  
+      
+    </div>
+  </div>
+
+    <div class="row split-section">
+    <div ng-repeat="block in program.top" class="col-sm-10  col-sm-offset-1">
+     <edit data="block"></edit>  
+      <h2>{{block.title}} </h2>
+      <p ng-bind-html="block.text"></p>      
+    </div>
+
+   
+
+  </div>
+
+
+     <new dest="'programs/'+program.$id+'/top'" image="true"></new>   
+
+
+  
+
+    <div class="row split-section">
+     <div class="col-sm-10  col-sm-offset-1">
+	<h2>Meld deg på i dag</h2>
+	<p>Prisen for <b>{{program.programname}} - {{program.shortdesc}}</b> er på <b>{{program.price}}</b>.</p>
+    <p>Innsending av skjema er uforpliktende.</p>
+    </br>
+	<p>For å starte fyller du ut <!--uforpliktet--> din informasjon nedenfor og jeg vil kontakte deg via e-post innen 24 timer for å snakke med deg om dine mål og dine neste skritt. </p><p> <b>Gratulerer med å virkelig investere i deg selv!</b></p>
+	<p>Beste hilsen Rubina / Ernæringsfysiolog og Personlig trener</p>
+
+	<!--</br>
+	<p>Prisen for <b>{{program.programname}} - {{program.shortdesc}}</b> er på <b>{{program.price}}</b>.</p>
+	<p> Innsending av skjema er uforpliktende.</p>-->
+	
+
+
+	</div>
+	</div>
+	<div class="row split-section">
+     <div class="col-sm-10  col-sm-offset-1">
+      <form action="sendMail.php" method="post">
+      <div class="form-group row">
+	      <label for="program" class="col-sm-4 col-form-label">Ønsket program: </label>
+	      <div class="col-sm-8">
+	        <!--<span class="form-control-static">{{program.programname}} - {{program.shortdesc}}</span>-->
+	        <input type="text" class="form-control" id="program" name="program" value="{{program.programname}} - {{program.shortdesc}}"> 
+	        <p><small>Usikker på hva du vil ha? Det er også lov, skriv "usikker" og jeg kan hjelpe deg!</small></p>
+	      </div>
+	    </div>
+      	
+	    <div class="form-group row">
+	      <label for="name" class="col-sm-4 col-form-label">Fullt navn</label>
+	      <div class="col-sm-8">
+	        <input type="text" class="form-control" name="name" id="name" placeholder="Fullt navn">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="email" class="col-sm-4 col-form-label">E-post adresse</label>
+	      <div class="col-sm-8">
+	        <input type="email" class="form-control" name="email" id="email" placeholder="E-post adresse">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="age" class="col-sm-4 col-form-label">Alder</label>
+	      <div class="col-sm-8">
+	        <input type="number" class="form-control" name="age" id="age" placeholder="Alder">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="location" class="col-sm-4 col-form-label">Bosted (by)</label>
+	      <div class="col-sm-8">
+	        <input type="text" class="form-control" name="location" id="location" placeholder="Bosted (by)">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="motivation" class="col-sm-4 col-form-label">Motivasjon på en skala fra 1-10.</label>
+	      <div class="col-sm-8">
+	        <input type="number" class="form-control" name="motivation" id="motivation" placeholder="Motivasjon på en skala fra 1-10">
+	      </div>
+	    </div>
+	     <div class="form-group row">
+	     <div class="col-sm-4"><label for="moreinfo">Noe du vil dele slik at jeg får en følelse av hvor du starter.</label></div>
+	     <div class="col-sm-8">
+	      
+	      <textarea class="form-control" name="moreinfo" rows="4" id="moreinfo"></textarea>
+	      
+	     		
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	    <div class="col-sm-4"></div>
+		 <div class="col-sm-8">
+			<div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input">
+		      Send kopi til min epost
+		    </label>
+		  </div>
+		 </div>
+	    </div>
+	    <center>
+<input type="submit" name="submit" value="Submit">
+	   <!-- <button type="submit" class="btn btn-success  btn-lg ">Send</button></center>-->
+      </form>
+
+    </div>
+   </div>
+
+</div>
+
+

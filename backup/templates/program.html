@@ -1,0 +1,92 @@
+<div class="container">
+
+  <div class="row split-section">
+    <div class="col-sm-10  col-sm-offset-1">
+    <h1>{{program.title}}</h1>
+      <p>{{program.intro}}</p>      
+    </div>
+  </div>
+
+    <div class="row split-section">
+    <div class="col-sm-10  col-sm-offset-1">
+      <h2 class="inline-list">{{program.includeTitle}} </h2>
+      <p class="inline-list" ng-bind-html="program.includes"></p>      
+    </div>
+  </div>
+
+    <div class="row split-section">
+     <div class="col-sm-10  col-sm-offset-1">
+	<h2>Meld deg på i dag</h2>
+	<p>Fyll ut skjemaet og jeg kontakter deg i løpet av 24 timer</p>
+	</div>
+	</div>
+	<div class="row split-section">
+     <div class="col-sm-10  col-sm-offset-1">
+      <form >
+      <div class="form-group row">
+	      <label for="program" class="col-sm-4 col-form-label">Kostholdsprogram</label>
+	      <div class="col-sm-8">
+	        <span class="form-control-static">{{program.packagetitle}} - {{program.title}}</span>
+	      </div>
+	    </div>
+      	
+	    <div class="form-group row">
+	      <label for="name" class="col-sm-4 col-form-label">Fullt navn</label>
+	      <div class="col-sm-8">
+	        <input type="text" class="form-control" id="name" placeholder="Fullt navn">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="email" class="col-sm-4 col-form-label">E-post adresse</label>
+	      <div class="col-sm-8">
+	        <input type="email" class="form-control" id="email" placeholder="E-post adresse">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="age" class="col-sm-4 col-form-label">Alder</label>
+	      <div class="col-sm-8">
+	        <input type="number" class="form-control" id="age" placeholder="Alder">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="location" class="col-sm-4 col-form-label">Bosted (by)</label>
+	      <div class="col-sm-8">
+	        <input type="text" class="form-control" id="location" placeholder="Bosted (by)">
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	      <label for="motivation" class="col-sm-4 col-form-label">Motivasjon på en skala fra 1-10.</label>
+	      <div class="col-sm-8">
+	        <input type="number" class="form-control" id="motivation" placeholder="Motivasjon på en skala fra 1-10">
+	      </div>
+	    </div>
+	     <div class="form-group row">
+	     <div class="col-sm-4"><label for="moreinfo">Noe du vil dele slik at jeg får en følelse av hvor du starter.</label></div>
+	     <div class="col-sm-8">
+	      
+	      <textarea class="form-control" rows="4" id="moreinfo"></textarea>
+	      <!--<div class="col-sm-10">
+	        <input type="number" class="form-control" id="motivation" placeholder="Motivasjon på en skala fra 1-10">
+	      </div>-->			
+	      </div>
+	    </div>
+	    <div class="form-group row">
+	    <div class="col-sm-4"></div>
+		 <div class="col-sm-8">
+			<div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input">
+		      Send kopi til min epost
+		    </label>
+		  </div>
+		 </div>
+	    </div>
+	    <center><button type="submit" class="btn btn-success  btn-lg ">Send</button></center>
+      </form>
+
+    </div>
+   </div>
+
+</div>
+
+

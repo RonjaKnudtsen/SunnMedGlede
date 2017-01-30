@@ -1,0 +1,95 @@
+//@import url('https://fonts.googleapis.com/css?family=Montserrat|Oswald&subset=latin-ext');
+//@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway:400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Satisfy'); // logo. 
+	/*
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);*/
+@screen-md: 1040px;
+	//color: #84496e;
+	//color: #745d6b;
+	//color: #2fad8b;
+
+	@fullscreen: 1415px;
+
+//Colors
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              #595959;
+@gray:                   #757575;
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+@brand-primary:         darken(#2fad8b, 6.5%);
+@brand-success:         #2fad8b;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+@purple: 				#84496e;
+@dark-white: 			#daf2f2;
+
+@text-color:              @gray-dark;
+@headings-color:          @gray;
+@headings-link-color:     @brand-primary;
+@headings-link-color-hover: @brand-success;
+h1, h2, h3, h4, h5, h6{
+	a{
+		color: @headings-link-color;
+		text-decoration: none;
+	}
+	a:hover{
+		color: @headings-link-color-hover;
+		text-decoration: none;
+	}
+}
+
+@body-bg:               #f8f8f8;
+
+//FONTS
+
+//@font-family-sans-serif:  'Montserrat', sans-serif;
+@font-family-sans-serif: 'Raleway', sans-serif;
+//@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+
+@font-family-base:        @font-family-sans-serif;
+//@headings-font-family:    'Oswald', sans-serif;
+@headings-font-family: 'Playfair Display', serif;
+@logo-font: 'Satisfy', cursive;
+
+@headings-font-weight:    100;
+@headings-line-height:    1.7;
+
+
+//** Load fonts from this directory.
+@icon-font-path:          "../fonts/";
+//** File name for all font files.
+@icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+@icon-font-svg-id:        "glyphicons_halflingsregular";
+
+
+//Font sizes
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+

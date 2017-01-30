@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Oswald&subset=latin-ext');
+body{
+	background-color: #f8f8f8;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+/*
+.carousel-inner{
+	height: 70vh;
+}
+
+.carousel-inner>.item.active{
+	height: 70vh;
+}
+
+.carousel-inner img{
+	position:absolute;
+	top: 0;
+	//bottom: 0;
+	margin:auto;
+}
+*/
+
+
+
+h1,h2,h3,h4,h5,h6{
+		line-height: 1.7;
+	color: #757575;
+	font-family: 'Oswald', sans-serif;
+	//color: #84496e;
+	//color: #745d6b;
+	//color: #2fad8b;
+}
+h1,h2{
+
+	font-weight: 600;
+}
+p, li{
+	font-size: 18px;
+	line-height:2;
+	color: #757575;
+
+}
+/*.carousel-indicators{
+	width: 100%;
+	position: relative;
+	padding-top:30px;
+	left: 0;
+	margin-left: 0;
+	text-align:right;
+}
+
+.carousel-indicators li{
+
+	border: 1px solid #757575;
+	width: 16px;
+	height:16px;
+	top: 10px;
+	margin: 0 2px 0 2px;
+}
+.carousel-indicators span.fa{
+	display:inline-block;
+	cursor: pointer;
+	margin: 0;
+	font-size: 18px;
+	//margin-top: -7px;
+	color: #757575;
+	 vertical-align: top;
+	 margin: 0 2px 0 2px;
+}
+.carousel-indicators li.active{
+	width: 16px;
+	height:16px;
+	background-color: #757575;
+	margin: 0 2px 0 2px;
+
+}
+*/
+.carousel-text{
+	width: 40%;
+	float:right;
+	padding: 20px;
+	height: 100%;	
+	display: none;
+}
+
+
+
+@media (min-width: 767px) {
+	.carousel-text{
+		padding: 60px;
+	}
+}
+
+.carousel-outer{
+	border-bottom: solid 2px #e7e7e7;
+	background-color: #fff;
+}
+
+.navbar{
+	margin-bottom: 0;
+}
+footer {
+//  position: relative;
+ // bottom: 0;
+  width: 100%;
+text-align: center;
+padding:20px;
+background-color: #84496e;
+
+margin-top:100px;
+}
+footer p{
+	  line-height: 1;
+	  font-size: 14px;
+	  color: #daf2f2;
+}
+footer p a{
+	color: #fff;
+	text-decoration: underline;
+}
+
+.carousel{
+	width: 60%;
+	//height: 70vh;
+	} 
+.carousel-caption{
+
+}
+
+.carousel-text h1{
+	margin-top: 70px;
+}
+
+
+.marketing .col-md-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing  {
+  font-weight: normal;
+
+}
+.marketing .col-md-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.marketing h2{
+
+}
+
+.split-section{
+	margin-top: 60px;
+	margin-bottom: 40px;
+	text-align:center;
+}
+
+.package-icon{
+	max-width: 200px;
+}
+
+.navbar{
+	min-height: 60px;
+	background-color: #2fad8b; 
+	border-color: #259073;
+		color: #fff;
+}
+.navbar-default .navbar-toggle{
+	background-color: #daf2f2;
+}
+
+.navbar-default .navbar-nav>li>a{
+		color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover{
+		color: #daf2f2;
+}
+.navbar-brand{
+	padding-top: 7px;
+
+}
+.navbar-brand span{
+	margin-right: 5px;
+}
+.navbar-brand img{
+	display: inline;
+}
+.navbar-brand .brand-text{
+	display:inline;
+	color: #fff;
+	//padding-top: 2px;
+	margin-left: 5px;
+		font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 23px;
+	vertical-align: middle;
+}
+
+.navbar-header{
+	height: 60px;
+}
+.navbar-default .navbar-brand{
+	color: #fff;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+	color: #daf2f2;
+}
+@media screen and (min-width: 480px) {
+	.navbar-nav>li>a{
+		padding-top: 20px;
+	}
+}
+
+.slider{
+	width: 100%;
+	height: 70vh;
+    overflow: hidden;
+    position: relative;
+    background: #e6e6e6;
+    border: 20px solid #FFF;
+    margin-top: 20px;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*
+.carousel-inner{
+	max-height: 70vh;
+}
+.carousel{
+margin-bottom: 20px;
+}
+
+.carousel-caption{
+	  background: rgba(100, 100, 100, .5);
+	  text-align: left;
+	  padding: 20px;
+	  right:30%;
+	  left: 30%;
+	  bottom: 30px;
+}
+.carousel-inner>.item.active{
+	max-height: 70vh;
+	vertical-align: middle;
+	display:inline-block;
+}
+
+.carousel-inner img{
+	vertical-align: middle;
+}*/
+
+/*
+.slide.ng-enter{
+		transition:0.3s ease all;
+		opacity: 0;
+		transform:translateX(-100%);
+}
+.slide.ng-enter.ng-enter-active{
+		opacity: 1;
+		transform:translateX(0);
+}
+.slide.ng-leave{
+		transition:0.3s ease all;
+		opacity: 1;
+		transform:translateX(0%);
+}
+.slide.ng-leave.ng-leave-active{
+	opacity: 0;
+	transform:translateX(100%);
+}*/

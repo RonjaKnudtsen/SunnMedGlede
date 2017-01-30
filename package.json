@@ -1,0 +1,30 @@
+{
+  "name": "sunnsterk",
+  "version": "1.0.0",
+  "description": "Sunnsterk",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonjaKnudtsen/SunnSterk.git"
+  },
+  "keywords": [
+    "angular",
+    "project"
+  ],
+  "author": "RonjaKnudtsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RonjaKnudtsen/SunnSterk/issues"
+  },
+  "homepage": "https://github.com/RonjaKnudtsen/SunnSterk#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0",
+    "grunt-express": "^1.0.0"
+  }
+}

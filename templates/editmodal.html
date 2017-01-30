@@ -1,0 +1,57 @@
+<div class="modal-header">
+   <!-- <input type="text"  ng-model="edit.title" class="form-control input-lg" id="title">-->
+  <h2> Rediger:</h2>
+</div>
+<div class="modal-body">
+  <!--<textarea ng-show="edit.text" class="form-control"  ng-model="edit.text" rows="10" id="text"></textarea>
+  <div  ng-show="edit.image">
+	BildeURL: 
+    <input type="text"  ng-model="edit.image" placeholder="Bilde URL" class="form-control input-sm" id="image">
+    </div>
+  <div  ng-show="edit.image">
+  BildeURL: 
+    <input type="text"  ng-model="edit.image" placeholder="Bilde URL" class="form-control input-sm" id="image">
+  </div>-->
+  <div class="form-group" ng-repeat="(key, value) in edit" >
+  <div ng-hide="key == 'path' || key == 'top'">
+    <p><b>{{key}}</b></p>
+    <div ng-if="key == 'description' || key == 'longdesc' || key == 'text'">
+    <textarea ui-tinymce="tinymceOptions"   class="form-control" rows="10" ng-model="edit[key]" ></textarea>
+    <p>Trykk shift-enter for kort linjeskift</p>
+    </div>
+    <input type="text" ng-model="edit[key]"  class="form-control"  ng-hide="key == 'description' || key == 'longdesc' || key == 'text'"" >
+    <div ng-if="key == 'image'" class="col-md-12 row"> 
+    <p><i>Fjern bildenavnet for å se alternativene. </i></p>
+      <div  class="col-xs-4" ng-repeat="image in images |filter:value">
+        <div class="img-thumbnail">
+          <img class="img-responsive " src="images/{{image}}">
+          {{image}}
+        </div>
+       
+        </div>
+
+      </div>
+      <div ng-if="key == 'image'">
+      <p>Bilde forhåndsvisning:</p>    
+    <img class="img-responsive " src="images/{{value}}">  
+
+    </br> 
+    </div>
+    </div>
+    </br>
+  </div>
+  
+</div>
+      <div class="modal-footer">
+        <button type="button" ng-click="delete(edit)" class="btn btn-danger">Slett</button>
+
+        <button type="button" ng-click="upload(edit)" class="btn btn-success">Lagre endringer</button>
+          <button type="button" class="btn btn-secondary" ng-click="dismiss()" data-dismiss="modal">Lukk/Avbryt</button>
+
+       
+
+         <!-- <h3>Other images:</h3>
+          <p>Name: {{image}}</p>
+          <img class="package-icon" src="images/{{image}}">-->
+  </div>
+      </div>

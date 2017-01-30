@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Oswald&subset=latin-ext');
+
+/* These are the sizes used. 
+@media (min-width: @screen-desktop) {
+
+}
+@media (min-width: @screen-lg){
+
+}
+@media (min-width: @fullscreen) {
+
+}
+*/
+
+.center{
+	text-align: center;
+}
+
+p, li{
+	font-size: 18px;
+	line-height:2;
+	//color: #757575;
+
+}
+// Fonts and type
+@media (min-width: @screen-desktop) {
+	li, p{
+		font-size: 14px;
+	}
+	h2{
+		font-size: 26px;
+	}
+
+}
+@media (min-width: @screen-lg){
+	li, p{
+		font-size: 16px;
+	}
+	h2{
+		font-size: 28px;
+		margin-top: 10px;
+	}	
+}
+@media (min-width: @fullscreen) {
+	li, p{
+		font-size: 18px;
+	}
+	h2{
+		font-size: 34px;
+	}
+}
+
+
+// Icons
+	.package-icon {
+	    max-width: 350px;
+	}
+	.package-icon-smaller{
+		max-width: 300px;
+	}
+@media (min-width: @screen-tablet) {
+	.package-icon {
+	    max-width: 200px;
+	}
+	.package-icon-smaller{
+		max-width: 150px;
+	}
+}
+// Fonts and type
+@media (min-width: @screen-desktop) {
+	.package-icon {
+	    max-width: 275px;
+	}
+	.package-icon-smaller{
+		max-width: 225px;
+	}
+}
+@media (min-width: @screen-lg){
+	.package-icon {
+	    max-width: 300px;
+	}
+	.package-icon-smaller{
+		max-width: 250px;
+	}
+}
+@media (min-width: @fullscreen) {
+	.package-icon {
+	    max-width: 300px;
+	}
+	.package-icon-smaller{
+		max-width: 250px;
+	}
+}
+
+
+//--------------Carousel and slider
+.carousel-indicators{
+	width: 100%;
+	position: relative;
+	left: 0;
+	margin-left: 0;
+	text-align:right;
+}
+.carousel{
+	width: 100%;
+	//height: 70vh;
+	} 
+.carousel-text{
+	display:none;
+	width: 100%;
+	float:right;
+	padding: 20px;
+	height: 100%;	
+	li, p{
+			font-size: 14px;
+		}
+	h1{
+		margin-top: 10px;
+		font-size: 24px;
+	}
+}
+.carousel-text h1{
+	
+}
+.slider-smallscreen {
+	ul{ padding-left: 0px;}
+	li{
+	 list-style-position: inside;
+
+	}
+}
+.row-heading{
+	margin-bottom: 40px;
+}
+
+ul.inline-list, .inline-list ul{
+	 padding-left: 0px;
+	li{
+		list-style-position: inside;
+	}
+}
+
+@media (min-width: @screen-desktop) {
+	.carousel{
+	width: 60%;
+	
+	} 
+	.slider-smallscreen{
+		display: none;
+	}
+	.carousel-text{
+		display:block;
+		padding: 40px;
+		width: 40%;
+	//	color: green;
+		
+		li, p{
+			font-size: 14px;
+		}
+		h2{
+			font-size: 26px;
+			margin-top: -10px;
+		}
+	}
+
+
+}
+@media (min-width: @screen-lg){
+
+	.carousel-text{
+		padding: 40px;
+
+		//color: orange;
+		li, p{
+			font-size: 16px;
+		}
+		h2{
+			font-size: 28px;
+			margin-top: 10px;
+		}
+	}
+}
+@media (min-width: @fullscreen) {
+		.carousel{
+	width: 60%;
+	
+	
+	} 
+	.carousel-indicators{
+		padding-top: 30px;
+	}
+	.carousel-text{
+		width: 40%;
+	//	color: red;
+		padding: 60px;
+		li, p{
+			font-size: 18px;
+		}
+		h2{
+			font-size: 34px;
+			//line-height: 1;
+			margin-top:20px;
+			//margin-bottom: 10px;
+		}
+	}
+
+}
+
+.carousel-outer{
+	//border-bottom: solid 2px @dark-white;
+	background-color: #fff;
+}
+.carousel-indicators li{
+
+	border: 1px solid @gray;
+	width: 16px;
+	height:16px;
+	top: 10px;
+	margin: 0 2px 0 2px;
+}
+.carousel-indicators span.fa{
+	display:inline-block;
+	cursor: pointer;
+	margin: 0;
+	font-size: 18px;
+	//margin-top: -7px;
+	color: @gray;
+	 vertical-align: top;
+	 margin: 0 2px 0 2px;
+}
+.carousel-indicators li.active{
+	width: 16px;
+	height:16px;
+	background-color: @gray;
+	margin: 0 2px 0 2px;
+
+}
+
+.navbar{
+	margin-bottom: 0;
+}
+footer {
+//  position: relative;
+ // bottom: 0;
+  width: 100%;
+text-align: center;
+padding:20px;
+background-color: @purple;
+margin-top:100px;
+}
+
+footer p{
+	  line-height: 1;
+	  font-size: 14px;
+	  color: @dark-white;
+}
+footer p a{
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+.carousel-caption{
+
+}
+
+
+
+.marketing .col-md-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing  {
+  font-weight: normal;
+
+}
+.marketing .col-md-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.marketing h2{
+
+}
+
+.split-section{
+	margin-top: 60px;
+	margin-bottom: 40px;
+	text-align:center;
+
+}
+.split-section form{
+
+	text-align:left;
+}
+
+
+.navbar{
+	min-height: 60px;
+	background-color: #2fad8b; 
+	border-color: #259073;
+		color: #fff;
+}
+.navbar-default .navbar-toggle{
+	background-color: #daf2f2;
+}
+
+.navbar-default .navbar-nav>li>a{
+		color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover{
+		color: #daf2f2;
+}
+.navbar-brand{
+	padding-top: 7px;
+
+}
+.navbar-brand span{
+	margin-right: 5px;
+}
+.navbar-brand img{
+	display: inline;
+}
+.navbar-brand .brand-text{
+	display:inline;
+	color: #fff;
+	//padding-top: 2px;
+	margin-left: 5px;
+		//font-family: 'Oswald', sans-serif;
+		font-family: @logo-font;
+	//text-transform: uppercase;
+	font-size: 24px;
+	
+	vertical-align: middle;
+
+	margin-top: -10px;
+}
+
+.navbar-header{
+	height: 60px;
+}
+.navbar-default .navbar-brand{
+	color: #fff;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+	color: #daf2f2;
+}
+@media screen and (min-width: 480px) {
+	.navbar-nav>li>a{
+		padding-top: 20px;
+	}
+}

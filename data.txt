@@ -1,0 +1,45 @@
+Slider:
+
+1
+Title: Velkommen
+Tekst: Og gratulerer med å ta det første skrittet for å virkelig investere i deg selv! <br> 
+Sunnsterk.no er veien til en sunn, energisk og strålende deg. Sammen skal vi jobbe for en sunn og sterk kropp i <br> 
+balanse og oppnå dine mål. Ikke minst kan du nyte herlig, sunne oppskrifter på naturlige råvarer og starte en aktiv <br> 
+hverdag tilpasset akkurat deg og hvor du er. <br> 
+<br> 
+Jeg ser frem til å jobbe med deg!<br> 
+
+2
+Title: Vi kan oppnå følgende resultater:
+Tekst: <ul><li>Sunn mat- og treningsglede i hverdagen</li>
+<li>En sunn og sterk kropp i balanse</li>
+<li>Mer overskudd, energi og velvære</li>
+<li>Maks utbytte av kosthold og trening</li>
+<li>Gå ned i vekt (1-15 kg+)</li>
+<li>Redusere % kroppsfett</li>
+<li>Øke % muskelmasse</li>
+<li>Sprekere og mer utholdende</li>
+<li>En sterkere og mer rustet kropp</li></ul>
+
+
+Introtekst
+
+Title: Ønsker du å investere i egen helse, og få en sunn og sterk kropp i balanse?
+Tekst: 
+Her kan du kan velge et 1-1 veiledningsprogram program helt skreddersydd <br> 
+til dine mål og behov fra hvor du er. Dette vil gi deg maks utbytte av tiden du investerer i egen helse. <br> 
+Uansett hvilke du velger, så følger jeg deg opp hele veien. <br> 
+Jeg ser frem til  å jobbe med deg! <br> 
+
+
+Ekstratekst:
+1
+Title: Matallergi, intoleranse, gravid, i barsel eller andre behov?
+Tekst: På våre skreddersøm-programmer tilpasser vi kostholdet og treningen etter dine behov.
+
+2:
+Title: I tillegg har vi følgende timer å tilby:
+Tekst: 
+&bull; Bli-kjent-konsultasjon<br>
+&bull; 6 måneder fullt ut<br>
+&bull; Fullstendig skreddersøm etter ditt ønske<br>

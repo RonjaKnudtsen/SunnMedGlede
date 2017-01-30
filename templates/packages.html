@@ -1,0 +1,44 @@
+
+
+
+<div class="container">
+  <div class="row split-section">
+    <div class="col-sm-10  col-sm-offset-1">
+    <h1>{{package.title}}</h1>
+    <p><b><i>{{package.shortdesc}}</i></b></p>
+      <p ng-bind-html="package.longdesc"></p>
+      
+    </div>
+  </div>
+
+  <div class="row split-section">
+    <div ng-repeat="block in package.top | toArray | orderBy: 'weight'" class="col-sm-10  col-sm-offset-1">
+      <h2>{{block.title}}</h2>
+      <p ng-bind-html="block.text"></p>
+      <edit ng-show="block.title" data="block"></edit>  
+      <delete ng-show="block.title" data="block"></delete>  
+
+    <!--
+      <h2>Du kan oppnå</h2>
+      <ul class="inline-list"><li  ng-repeat="goal in goals | toArray | orderBy: 'weight'">{{goal}}</li></ul> -->
+    </div>
+  </div>
+  
+  <new dest="'packages/'+package.packagename+'/top'" image="false"></new>
+   
+
+  <div class="row split-section">
+  <h2 class="row-heading">Velg ditt skreddersydde program</h2>
+    <div ng-class="columnClass(package)" ng-repeat="program in package.programs | toArray | orderBy: 'weight'"><!--  class="col-sm-3 center"-->
+
+      <edit data="program"></edit>  
+        <h3><a ui-sref="program({programname: program.programname})"> <img src="images/{{program.image}}" ng-class="imageColumnClass(package)">{{program.title}}</a></h3>       
+        <p>{{program.shortdesc}}</p>
+    </div>
+
+  </div>
+ </div>
+
+<p></p>
+
+

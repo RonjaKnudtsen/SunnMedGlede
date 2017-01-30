@@ -1,0 +1,133 @@
+<div class="carousel-outer">
+
+  <div class="carousel-text">
+    <div ng-repeat="slide in slider">  
+      <div id="{{'carousel-text-'+$index}}">
+      <h2>{{slide.title}}</h2>
+       <p ng-bind-html="slide.text"></p>
+      </div>    
+
+    <!--
+        <p ng-bind-html="slide.text" id="{{'carousel-text-'+$index}}" ></p>-->
+    </div>
+    <div>
+     <new dest="'frontpage/slider'" image="true"></new>
+    </div>
+
+    <ol class="carousel-indicators">
+      <li dta-target="#carousel-example-generic" data-slide-to="0" id="carousel-indicator-0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1" id="carousel-indicator-1"></li>
+      <span id="carousel-pause"class="fa fa-pause" aria-hidden="true"></span>
+    </ol>
+  </div>
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/3.JPG"  alt="...">
+      </div>
+      <div class="item">
+        <img src="images/1.JPG"   alt="...">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="container  slider-smallscreen">
+  <div class="row split-section" ng-repeat="slide in slider">
+    <div class="col-sm-10  col-sm-offset-1">
+      <edit path="sliderpath.$index" data="slide"></edit>    
+
+
+      <h2>{{slide.title}}</h2>
+      <p ng-bind-html="slide.text"></p>
+
+    </div>
+  </div>
+  <div class="row split-section">
+    <div  class="col-sm-10  col-sm-offset-1">
+       <new dest="'frontpage/slider'" image="true"></new>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row split-section">
+    <div class="col-sm-10  col-sm-offset-1">
+        <div id="intro2" class="editable">
+            <edit path="introtextpath" data="introtext" ></edit>   
+
+            <h2>{{introtext}}</h2>
+            <p>{{introtext}}</p> 
+        </div>
+
+       
+      
+    </div>
+    </div>
+    <div class="row split-section">
+        <div class="col-sm-10  col-sm-offset-1">
+        
+             <new dest="'frontpage/top'"></new>
+        
+
+       
+      
+    </div>
+  </div>
+</div>
+
+<div class="container marketing">
+  <div class="row split-section">
+    <h2 class="row-heading">Velg ditt kostholdsprogram</h2>
+    <div class="col-sm-4 center" ng-repeat="package in packageOverview">
+      <a ui-sref="package({packagename: package.packagename})"><img src="images/{{package.packagename}}.jpg" class="package-icon"></a>
+        <h3><a ui-sref="package({packagename: package.packagename})">{{package.title}}</a></h3>
+        <p>{{package.description}}</p>
+    </div>
+
+
+  </div>
+  </div>
+</div>
+
+
+<div ng-repeat="text in extratext" class="container">
+  <div class="row split-section">
+    <div class="col-sm-12">
+      <h3>{{text.title}}</h3>
+      <p>{{text.text}}</p>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row split-section">
+    <div class="col-sm-12">
+
+<new dest="'frontpage/bottom'"></new>
+
+    </div>
+  </div>
+</div>
+
+
+
+
