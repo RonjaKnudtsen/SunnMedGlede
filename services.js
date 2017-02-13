@@ -5,6 +5,32 @@
 var app = angular.module('sunn_sterk.services', ['firebase']);
 console.log("Angular services");
 
+app.service('MailService', function($http){
+  var mailService = {}
+
+  mailService.sendMail = function(content){
+
+  	$http({
+  		method: "POST",
+  		url: "sendMail.php",
+  		data: $.param({'data' : content}),
+      	headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+
+  	}).success(function(response){
+  		console.log("success:");
+  		console.log(response);
+  		return response;
+  	}).error(function(error){
+  		console.log(JSON.stringify("Failed to get t&c: " + error));
+  		return error;
+  	});
+  	return false;
+  }
+  
+  return mailService;
+});
+
+
 //---- Can get all data if path is provided
 //Must also check for authentication
 app.factory('DataService', function(Firebase, $firebaseObject, $firebaseArray, $http){
@@ -35,45 +61,31 @@ app.factory('DataService', function(Firebase, $firebaseObject, $firebaseArray, $
 		});*/
 		return $firebaseObject(dataRef);
 	}
+
 	factory.updateData = function(data, path){
 		//All data should have an ID attatched to them
-	console.log("Upload DATA: ");
+		console.log("Upload DATA: ");
 		console.log(data);
 		console.log("to PATH: ");
 		console.log(path);
 
-		/*upload = {
-			
-		}
-		*/
-		//Removes hash objects 
-		//var upload = angular.toJson(data);
 		firebase.database().ref(path).set(data);
 
-	  /*firebase.database().ref(path).set({
-	    
-	   		text: data.text,
-	   	 	title: data.title,
-	   	 	path: data.path,
-
-	  });*/
-
-
 	}
+
 	factory.postData = function(data, path){
 		if(path!=undefined || path!=null || path == "/" || path < 10){
 			console.log("DATA:"+data);
-		console.log("PATH:" +path);
+			console.log("PATH:" +path);
 
-		 var newPostKey = firebase.database().ref().child(path).push().key;
-		// data.key = newPostKey;
-		 data.path = path + '/'+newPostKey;
-		 console.log("POST: data");
-		 console.log(data);
-		  var updates = {};
-		  updates[data.path] = data;
+			var newPostKey = firebase.database().ref().child(path).push().key;			
+			data.path = path + '/'+newPostKey;
+			console.log("POST: data");
+			console.log(data);
+			var updates = {};
+			updates[data.path] = data;
 			
-		return firebase.database().ref().update(updates);
+			return firebase.database().ref().update(updates);
 		} else {
 			console.log("Path is undefined or null");
 			return "error";

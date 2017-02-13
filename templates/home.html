@@ -15,16 +15,13 @@
       </div>
   </div>
 
-  <div class="row split-section">
-    <div class="col-sm-10  col-sm-offset-1">
+
        <new dest="'frontpage/top'"></new>      
-    </div>
-  </div>
-</div>
+
 
 <div class="container marketing">
   <div class="row split-section">
-    <h2 class="row-heading">Velg ditt kostholdsprogram</h2>
+    <h2 class="row-heading">Velg ditt program</h2>
     <div class="col-sm-4 center" ng-repeat="package in packageOverview | toArray | orderBy: 'weight'">
       <a ui-sref="package({packagename: package.packagename})"><img src="images/{{package.packagename}}.jpg" class="package-icon"></a>
         <h3><a ui-sref="package({packagename: package.packagename})">{{package.title}}</a></h3>
